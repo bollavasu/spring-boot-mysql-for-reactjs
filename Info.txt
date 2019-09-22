@@ -1,0 +1,33 @@
+
+CREATE TABLE vasu.customers (
+  `customer_id` int(5) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL,
+  `age` varchar(100) NOT NULL,
+  `sal` varchar(200) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `qualification` varchar(200) NOT NULL,
+  `is_married` varchar(100) NOT NULL,
+  `gender` varchar(200) NOT NULL,
+  PRIMARY KEY (`customer_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+INSERT INTO vasu.customers (`customer_id`, `name`, `age`, `sal`, `address`, `qualification`, `is_married`, `gender`) VALUES
+	(10, 'Alex', '10', '10000', 'Australia', 'MSC', 'N', 'M'),
+	(11, 'Bob', '20', '20000', 'Brezil', 'BSC', 'Y', 'M'),
+	(12, 'Chris', '30', '30000', 'Canada', 'CS', 'Y', 'M');
+	
+http://localhost:8080/getAllCustomers    
+http://localhost:8080/getCustomer/12
+http://localhost:8080/deleteCustomer/10                 (DELETE)
+http://localhost:8080/addCustomer                       (POST)
+http://localhost:8080/updateCustomer                    (PUT)
+{
+    "customerId": 13,
+    "name": "David",
+    "age": "45",
+    "sal": "45000",
+    "address": "Denmark",
+    "qualification": "BA",
+    "isMarried": "N",
+    "gender": "M"
+}
